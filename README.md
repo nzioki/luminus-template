@@ -48,6 +48,7 @@ However, if you would like to attach further functionality to your template you 
 * `+cljs` adds [ClojureScript][cljs] support to the project
 * `+reagent` adds [ClojureScript][cljs] support with [Reagent](https://reagent-project.github.io/) to the project along with an example
 * `+re-frame` adds [ClojureScript][cljs] support with [re-frame](https://github.com/Day8/re-frame) to the project along with an example
+* `+kee-frame` added [kee-frame](https://github.com/ingesolvoll/kee-frame) to the project
 
 ### misc
 
@@ -61,7 +62,6 @@ However, if you would like to attach further functionality to your template you 
 * `+war` adds support of building WAR archives for deployment to servers such as Apache Tomcat (should NOT be used for [Immutant apps running on WildFly][immutant])
 * `+site` creates template for site using the specified database (H2 by default) and ClojureScript
 *  `+kibit` add [lein-kibit](https://github.com/jonase/kibit) plugin
-*  `+cider` adds support for [CIDER](https://github.com/clojure-emacs/cider) using [CIDER nREPL](https://github.com/clojure-emacs/cider-nrepl) plugin
 * `+servlet` adds middleware for handling Servlet context
 
 To add a profile simply pass it as an argument after your application name, e.g.:
@@ -110,6 +110,7 @@ The memory and CPU usage can be inspected by running either `jconsole` or `jvisu
 
 * [chestnut](https://github.com/plexus/chestnut)
 * [duct](https://github.com/duct-framework/duct)
+* [fulcro](https://github.com/fulcrologic/fulcro)
 * [pedestal](https://github.com/pedestal/pedestal)
 * [reagent-template](https://github.com/reagent-project/reagent-template)
 * [re-frame-template](https://github.com/Day8/re-frame-template)

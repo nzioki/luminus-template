@@ -13,12 +13,12 @@
             [leiningen.new.auth :refer [auth-features]]
             [leiningen.new.auth-base :refer [auth-base-features]]
             [leiningen.new.auth-jwe :refer [auth-jwe-features]]
-            [leiningen.new.cider :refer [cider-features]]
             [leiningen.new.db :refer [db-features]]
             [leiningen.new.cljs :refer [cljs-features]]
             [leiningen.new.hoplon :refer [hoplon-features]]
             [leiningen.new.reagent :refer [reagent-features]]
             [leiningen.new.re-frame :refer [re-frame-features]]
+            [leiningen.new.kee-frame :refer [kee-frame-features]]
             [leiningen.new.cucumber :refer [cucumber-features]]
             [leiningen.new.aleph :refer [aleph-features]]
             [leiningen.new.jetty :refer [jetty-features]]
@@ -115,7 +115,7 @@
 
 (def core-dependencies
   [['org.clojure/clojure "1.9.0"]
-   ['selmer "1.11.7"]
+   ['selmer "1.11.8"]
    ['clj-time "0.14.4"]
    ['markdown-clj "1.0.2"]
    ['metosin/muuntaja "0.5.0"]
@@ -144,7 +144,7 @@
    ['pjstadig/humane-test-output "0.8.3"]])
 
 (def core-dev-plugins
-  [['com.jakemccrary/lein-test-refresh "0.19.0"]])
+  [['com.jakemccrary/lein-test-refresh "0.23.0"]])
 
 (defn generate-project
   "Create a new Luminus project"
@@ -161,7 +161,6 @@
             auth-base-features
             auth-features
             auth-jwe-features
-            cider-features
             db-features
             cucumber-features
             site-features
@@ -169,6 +168,7 @@
             hoplon-features
             reagent-features
             re-frame-features
+            kee-frame-features
             swagger-features
             graphql-features
             aleph-features
@@ -213,7 +213,8 @@
       (set-feature-dependency "+hoplon" #{"+cljs"})
       (set-feature-dependency "+graphql" #{"+swagger"})
       (set-feature-dependency "+reagent" #{"+cljs"})
-      (set-feature-dependency "+re-frame" #{"+cljs" "+reagent"})))
+      (set-feature-dependency "+re-frame" #{"+cljs" "+reagent"})
+      (set-feature-dependency "+kee-frame" #{"+cljs" "+reitit" "+reagent" "+re-frame"})))
 
 (defn parse-version [v]
   (map #(Integer/parseInt %)
@@ -244,8 +245,8 @@
                              ;;servers
                              "+aleph" "+jetty" "+http-kit"
                              ;;misc
-                             "+cljs" "+hoplon" "+reagent" "+re-frame" "+auth" "+auth-jwe" "+site"
-                             "+cucumber" "+sassc" "+cider" "+oauth"
+                             "+cljs" "+hoplon" "+reagent" "+re-frame" "+kee-frame" "+auth" "+auth-jwe" "+site"
+                             "+cucumber" "+sassc" "+oauth"
                              "+swagger" "+war" "+graphql"
                              "+kibit" "+service" "+servlet"
                              "+boot"}

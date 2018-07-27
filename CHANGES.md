@@ -1,3 +1,54 @@
+## 2.9.12.78
+
+- luminus-migrations 0.5.2
+- kee-frame routing improvements 
+
+## 2.9.12.77
+
+- conman 0.8.2
+
+## 2.9.12.76
+
+- com.jakemccrary/lein-test-refresh 0.23.0
+
+## 2.9.12.75
+
+- [PR 376](https://github.com/luminus-framework/luminus-template/pull/376) removes explicit cider profile, as it's no longer necessary
+
+## 2.9.12.74
+
+- updated reitit profile to wrap default middleware globally
+
+## 2.9.12.73
+
+- fix missing require in +reitit +service profile combination
+
+## 2.9.12.72
+
+- added +kee-frame profile
+
+## 2.9.12.71
+
+- fixed font awesome asset loading
+
+## 2.9.12.70
+
+- cljs-ajax 0.7.4
+- luminus-migrations 0.5.1
+- metosin/reitit 0.1.3
+
+## 2.9.12.69
+
+- fixed to only import servlet for middleware when the profile is selected
+
+## 2.9.12.68
+
+- slemer 1.11.8
+
+## 2.9.12.67
+
+- added transit as an explicit dependency for cljs
+
 ## 2.9.12.66
 
 - ClojureScript 1.10.339
